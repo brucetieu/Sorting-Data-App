@@ -38,6 +38,14 @@ const styleTable = (div, table, tableTitle) => {
   cell.innerHTML = "<b>" + tableTitle + "</b>";
 };
 
+
+const isInvalid = (row) => {
+  row.forEach((element) => {
+    if (!element || element === null || element === '') return false
+  })
+  return true 
+}
+
 /**
  * Create the html table to be displayed.
  * @param {Array<Array>} rows Rows in the csv
@@ -55,6 +63,7 @@ const createTable = (rows, tableTitle) => {
   const records = [];
 
   for (let i = 0; i < rows.length; i++) {
+    if (isInvalid(rows[i])) continue;
     const tr = document.createElement("tr");
 
     if (i != 0) {
