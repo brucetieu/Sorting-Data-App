@@ -49,6 +49,7 @@ export const compareBy = (columns) => {
         column = column.substr(1);
         dir = -dir;
       }
+      // If one field has two values that are the same, we want to sort the next field by ascending or descending order.
       if (a[column] > b[column]) return dir;
       else if (a[column] < b[column]) return -dir;
     }
