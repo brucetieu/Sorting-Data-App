@@ -38,7 +38,7 @@ const styleTable = (div, table, tableTitle) => {
   cell.innerHTML = "<b>" + tableTitle + "</b>";
 };
 
-
+// Check if a string is null, undefined, or empty.
 function isEmpty(str) {
   return (!str || str.length === 0 );
 }
@@ -47,7 +47,7 @@ function isEmpty(str) {
  * Create the html table to be displayed.
  * @param {Array<Array>} rows Rows in the csv
  * @param {String} tableTitle The label given to the table
- * @returns
+ * @returns Array<Record>
  */
 const createTable = (rows, tableTitle) => {
   console.log("Creating table...");
@@ -106,6 +106,7 @@ Constants.sortBtn.addEventListener("click", () => {
   if (ascending.childElementCount === 0 && descending.childElementCount === 0)
     return;
   else {
+    // Can only do ascending then descending order. Next time, also add descending then by ascending order.
     Constants.ascendingBox.childNodes.forEach((node) => columns.push(node.value));
     Constants.descendingBox.childNodes.forEach((node) =>
       columns.push("-" + node.value)
