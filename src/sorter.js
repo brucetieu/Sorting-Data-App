@@ -4,13 +4,13 @@ export const merge = (arr1, arr2, comparator) => {
   let j = 0;
 
   while (i < arr1.length && j < arr2.length) {
-    // arr1 comes before arr2
-    if (comparator(arr2[j], arr1[i]) === 1) {
-      result.push(arr1[i]);
-      i++;
-    } else {
+    // arr2 comes before arr1
+    if (comparator(arr1[i], arr2[j]) === 1) {
       result.push(arr2[j]);
       j++;
+    } else {
+      result.push(arr1[i]);
+      i++;
     }
   }
 
