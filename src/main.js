@@ -39,11 +39,8 @@ const styleTable = (div, table, tableTitle) => {
 };
 
 
-const isInvalid = (row) => {
-  row.forEach((element) => {
-    if (!element || element === null || element === '') return false
-  })
-  return true 
+function isEmpty(str) {
+  return (!str || str.length === 0 );
 }
 
 /**
@@ -63,7 +60,6 @@ const createTable = (rows, tableTitle) => {
   const records = [];
 
   for (let i = 0; i < rows.length; i++) {
-    if (isInvalid(rows[i])) continue;
     const tr = document.createElement("tr");
 
     if (i != 0) {
@@ -80,6 +76,7 @@ const createTable = (rows, tableTitle) => {
     }
 
     for (const rowElement of rows[i]) {
+      if (isEmpty(rowElement)) break
       const text = document.createTextNode(rowElement);
       if (i === 0) {
         const header = document.createElement("th");
