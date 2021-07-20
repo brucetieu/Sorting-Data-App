@@ -1,6 +1,6 @@
 export var Constants = {
   INPUT_DATA:
-    "../data/input.csv",
+    "https://raw.githubusercontent.com/brucetieu/Sorting-Data-App/master/data/input.csv",
 
   loadDataBtn: document.querySelector("#load-data"),
   columnBox: document.querySelector("#column"),
