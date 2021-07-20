@@ -1,0 +1,79 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+div.btn-container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #d4d4d4;
+  margin-top: 100px;
+}
+
+tr:nth-child(even) {
+  background: #d4d4d4;
+}
+
+th,
+td {
+  padding: 10px 30px;
+}
+
+th {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.columns,
+.columns-to-sort {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+
+.arrows {
+  text-align: center;
+  width: 50px;
+}
+
+.components-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100%;
+}
+
+.left-section {
+  width: auto;
+  align-items: center;
+  background-color: gainsboro;
+}
+
+.left-section-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+}
+
+.arrows {
+  text-align: center;
+}
+
+.actions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions button {
+  margin: 10px;
+}

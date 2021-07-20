@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Papa Parse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"
+        integrity="sha512-EbdJQSugx0nVWrtyK3JdQQ/03mS3Q1UiAhRtErbwl1YL/+e2hZdlIcSURxxh7WXHTzn83sjlh2rysACoJGfb6g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Sorting App</title>
+</head>
+
+<body>
+
+    <div class="components-wrapper">
+        <div class="left-section">
+            <div class="left-section-inner">
+                <div class="columns inner">
+                    <h5>Columns</h5>
+                    <select id="column" multiple="true">
+                        <option value="name">Name</option>
+                        <option value="address">Address</option>
+                        <option value="invoice">Invoice Amount</option>
+                        <option value="date">Date of Sale</option>
+                    </select>
+                </div>
+                <div class="arrows inner">
+                    <button class="add"> > </button>
+                    <button class="remove">
+                        < </button>
+                            <button class="add-all"> >>> </button>
+                            <button class="remove-all">
+                                <<< </button>
+                </div>
+                <div class="columns-to-sort inner">
+                    <h5>Ascending</h5>
+                    <select id="ascending" multiple="true"></select>
+                </div>
+                <div class="arrows inner">
+                    <button class="add2"> > </button>
+                    <button class="remove2">
+                        < </button>
+                            <button class="add-all2"> >>> </button>
+                            <button class="remove-all2">
+                                <<< </button>
+                </div>
+                <div class="columns-to-sort inner">
+                    <h5>Descending</h5>
+                    <select id="descending" multiple="true"></select>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="sort-btn" type="button">Sort Column(s)</button>
+                <button id="clear-btn" type="button">Clear Tables</button>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="btn-container">
+                <button id="load-data" type="button">Load Data</button>
+            </div>
+            <!-- Table goes here -->
+            <div class="table-container"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/util.js"></script>
+</body>
+
+</html>
